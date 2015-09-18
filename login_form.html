@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Online PhotoGallery-Login</title>
+   <style>
+   
+
+
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url("ad.jpg");
+	background-size: cover;
+	
+	
+}
+
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(30% - 255px);
+	
+}
+
+.header div{
+	
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa ;
+}
+
+.login{
+	position: absolute;
+	top: calc(40% );
+	left: calc(45% );
+	
+}
+
+
+
+.create_account
+{
+
+    position: absolute;
+	top: calc(64.5% - 75px);
+	left: calc(75% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	box-shadow: 0 0 20px white;
+	transition:all 1s ease-in-out;
+	
+}
+
+.create_account:hover {
+
+      box-shadow: 0 0 500px white;
+      background-color: red;
+      -webkit-transform:rotate(360deg);
+}
+
+.create_account input[type=button]{
+	width: 160px;
+	height: 35px;
+	background: black;
+	border: 1px solid black;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #FFFFFF;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.create_account input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.create_account input[type=button]:active{
+	opacity: 0.6;
+}
+
+
+
+
+
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: transparent;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: white;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+
+</style>
+
+   
+<script type="text/javascript">
+ 	function validate()
+ 	{
+ 		var a= document.forms["myForm"]["Email_Id"].value;
+ 		var b = document.forms["myForm"]["Password"].value;
+    	if (a==null || a=="") {
+        alert("Email_Id must be filled out");
+        return false;
+   		 }
+   		else if (b==null || b=="") {
+        alert("Password must be filled out");
+
+        return false;
+   		 }	
+ 	}
+ </script>
+</head>
+
+<body>
+
+        <div class="body"></div>
+		<div class="header">
+		<div>Online<span>Art</span><span>Gallery</span></div>
+		</div>
+		<br>
+		<form action="login.php" method="POST" name="myForm" onsubmit="return validate()">
+		<div class="login">
+				<input type="text" placeholder="username" name="Email_Id"><br>
+				<input type="password" placeholder="password" name="Password"><br><br>
+				<div class="log"><input style="width:260px; height:35px" type="submit" value="Login" style="margin-top:0px" id = "lo" ></div>
+		</form>
+				
+		</div>
+
+         <div class="create_account" style="width:140px; height:15px">
+		<input type="button" value="Create Account" ONCLICK="window.location.href='create_account-form.html'" style="margin-left:-10px; margin-top:-10px"/>
+       </div>
+  
+
+</body>
+
+</html>

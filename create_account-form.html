@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Acount Registration Form</title>
+<style type="text/css">
+h3{font-family: Calibri; 
+font-size: 22pt; 
+font-weight: bold; 
+color:#8A0808;
+text-align: center; 
+text-decoration: underline 
+}
+table{
+	font-family: Calibri; 
+	color:black; 
+  font-size: 11pt; 
+ 
+background-color: #F5ECCE; 
+border: 2px solid navy
+}
+
+</style>
+
+
+<script type="text/javascript">
+ 	function validate()
+ 	{
+ 		var a= document.forms["myForm"]["First_Name"].value;
+ 		var b = document.forms["myForm"]["Last_Name"].value;
+ 		var c = document.forms["myForm"]["Email_Id"].value;
+ 		var d = document.forms["myForm"]["Password"].value;
+ 		var e = document.forms["myForm"]["City"].value;
+ 		var f = document.forms["myForm"]["Country"].value;
+    	if (a==null || a=="") {
+        alert("First name must be filled out");
+        return false;
+   		 }
+   		else if (b==null || b=="") {
+        alert("Last name must be filled out");
+
+        return false;
+   		 }
+   		else if (c==null || c=="") {
+        alert("Email_Id must be filled out");
+        return false;
+   		 }
+   		else if (d==null || d=="") {
+        alert("Password must be filled out");
+        return false;
+   		 }
+   		else if (e==null || e=="") {
+        alert("City must be filled out");
+        return false;
+   		 }
+   		else if (f==null || f=="") {
+        alert("Country must be filled out");
+        return false;
+   		 }
+   		 if(d.length<=6)
+        {
+        	alert("Password must be more than 6 digit");
+        	return false;
+        }	
+ 	}
+ </script>
+</head>
+ 
+
+<body background="re.jpg">
+<h3>ACCOUNT REGISTRATION FORM</h3>
+<br></br>
+<form action="action1.php" method="POST" name="myForm" onsubmit=" return validate()">
+ 
+<table align="center" cellpadding = "10">
+ 
+<tr>
+<td>Id</td>
+<td><input type="text" name="Id" />
+
+</td>
+</tr>
+
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="15" />
+(max 15 characters a-z and A-Z)
+</td>
+</tr>
+ 
+
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="15" />
+(max 15 characters a-z and A-Z)
+</td>
+</tr>
+ 
+
+<tr>
+	<td>DATE OF BIRTH</td>
+<td><input type="date" ></td>
+</tr>
+ 
+
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_Id" maxlength="30" /></td>
+</tr>
+ 
+
+<tr>
+<td>Password</td>
+<td>
+<input type="password" name="Password" minlength="6" />
+(More than 6 digit)
+</td>
+</tr>
+ 
+
+<tr>
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="Gender" value="Male" />
+Female <input type="radio" name="Gender" value="Female" />
+</td>
+</tr>
+ 
+
+<tr>
+<td>CITY</td>
+<td><input type="text" name="City" maxlength="15" />
+(max 15 characters a-z and A-Z)
+</td>
+</tr>
+  
+
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country" maxlength="15" />
+(max 15 characters a-z and A-Z)</td>
+</tr>
+
+ 
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit" >
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+ 
+</form>
+ 
+</body>
+</html>
